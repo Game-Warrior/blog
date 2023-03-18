@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Fediverse-essay</title>
+<!-- 2023-01-22 Sun 18:23 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Org-mode">
+<meta name="author" content="Gardner Berry">
+
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style>
+/* org mode styles on top of twbs */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-size: 18px;
+    margin-bottom: 105px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 101px;
+    background-color: #f5f5f5;
+}
+
+footer > div {
+    padding: 10px;
+}
+
+footer p {
+    margin: 0 0 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#table-of-contents {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+blockquote p {
+    font-size: 18px;
+}
+
+pre {
+    font-size: 16px;
+}
+
+.footpara {
+    display: inline-block;
+}
+
+figcaption {
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+  padding-bottom: 15px;
+}
+
+/* from twbs docs */
+
+.bs-docs-sidebar.affix {
+    position: static;
+}
+@media (min-width: 768px) {
+    .bs-docs-sidebar {
+        padding-left: 20px;
+    }
+}
+
+/* All levels of nav */
+.bs-docs-sidebar .nav > li > a {
+    display: block;
+    padding: 4px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #999;
+}
+.bs-docs-sidebar .nav > li > a:hover,
+.bs-docs-sidebar .nav > li > a:focus {
+    padding-left: 19px;
+    color: #A1283B;
+    text-decoration: none;
+    background-color: transparent;
+    border-left: 1px solid #A1283B;
+}
+.bs-docs-sidebar .nav > .active > a,
+.bs-docs-sidebar .nav > .active:hover > a,
+.bs-docs-sidebar .nav > .active:focus > a {
+    padding-left: 18px;
+    font-weight: bold;
+    color: #A1283B;
+    background-color: transparent;
+    border-left: 2px solid #A1283B;
+}
+
+/* Nav: second level (shown on .active) */
+.bs-docs-sidebar .nav .nav {
+    display: none; /* Hide by default, but at >768px, show it */
+    padding-bottom: 10px;
+}
+.bs-docs-sidebar .nav .nav > li > a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.bs-docs-sidebar .nav .nav > li > a:hover,
+.bs-docs-sidebar .nav .nav > li > a:focus {
+    padding-left: 29px;
+}
+.bs-docs-sidebar .nav .nav > .active > a,
+.bs-docs-sidebar .nav .nav > .active:hover > a,
+.bs-docs-sidebar .nav .nav > .active:focus > a {
+    padding-left: 28px;
+    font-weight: 500;
+}
+
+/* Nav: third level (shown on .active) */
+.bs-docs-sidebar .nav .nav .nav {
+    padding-bottom: 10px;
+}
+.bs-docs-sidebar .nav .nav .nav > li > a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 40px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.bs-docs-sidebar .nav .nav .nav > li > a:hover,
+.bs-docs-sidebar .nav .nav .nav > li > a:focus {
+    padding-left: 39px;
+}
+.bs-docs-sidebar .nav .nav .nav > .active > a,
+.bs-docs-sidebar .nav .nav .nav > .active:hover > a,
+.bs-docs-sidebar .nav .nav .nav > .active:focus > a {
+    padding-left: 38px;
+    font-weight: 500;
+}
+
+/* Show and affix the side nav when space allows it */
+@media (min-width: 992px) {
+    .bs-docs-sidebar .nav > .active > ul {
+        display: block;
+    }
+    /* Widen the fixed sidebar */
+    .bs-docs-sidebar.affix,
+    .bs-docs-sidebar.affix-bottom {
+        width: 213px;
+    }
+    .bs-docs-sidebar.affix {
+        position: fixed; /* Undo the static from mobile first approach */
+        top: 20px;
+    }
+    .bs-docs-sidebar.affix-bottom {
+        position: absolute; /* Undo the static from mobile first approach */
+    }
+    .bs-docs-sidebar.affix .bs-docs-sidenav,.bs-docs-sidebar.affix-bottom .bs-docs-sidenav {
+        margin-top: 0;
+        margin-bottom: 0
+    }
+}
+@media (min-width: 1200px) {
+    /* Widen the fixed sidebar again */
+    .bs-docs-sidebar.affix-bottom,
+    .bs-docs-sidebar.affix {
+        width: 263px;
+    }
+}
+</style>
+<script>
+$(function() {
+    'use strict';
+
+    $('.bs-docs-sidebar li').first().addClass('active');
+
+    $(document.body).scrollspy({target: '.bs-docs-sidebar'});
+
+    $('.bs-docs-sidebar').affix();
+});
+</script>
+</head>
+<body>
+<div id="content" class="container">
+<div class="row"><div class="col-md-12"><h1 class="title">Fediverse-essay</h1>
+
+<div id="outline-container-sec-" class="outline-2">
+<h2 id="sec-">Introduction</h2>
+<div class="outline-text-2" id="text-">
+<p>
+THE Fediverse short for federated universe is a collection of social media networks that are connected by a couple of protocols. The largest and most notable of which is Activity Pub. Mastodon is a micro blogging platform and is  the largest of the networks that make up the fediverse. It has gained popularity after Elon Musk&rsquo;s purchase of Twitter and new erratic policy decisions.
+</p>
+
+
+<figure id="How the Fediverse connects">
+<p><img src="file:///Users/gb/Documents/School/Jana/How-the-Fediverse-connects.png" class="img-responsive" alt="How-the-Fediverse-connects.png" width="500px">
+</p>
+<figcaption><span class="figure-number">Figure 1:</span> This is a diagram of how the Fediverse interconnects.</figcaption>
+</figure>
+
+
+<figure id="Fediverse Branches">
+<p><img src="file:///Users/gb/Documents/School/Jana/Fediverse_branches_1.2.png" class="img-responsive" alt="Fediverse_branches_1.2.png" width="500px">
+</p>
+<figcaption><span class="figure-number">Figure 2:</span> This shows the manny branches of the Fediverse</figcaption>
+</figure>
+</div>
+</div>
+
+
+<div id="outline-container-sec-" class="outline-2">
+<h2 id="sec-">Why You Should use the Fediverse</h2>
+<div class="outline-text-2" id="text-">
+<p>
+You should use the Fediverse because it is made up free/libre software. Because this source code of the software is available to anyone, anyone can use it or modify it and distribute it, and it allows the users/developers to decide what they want to do with the project. This is in stark contrast to social media sites like Twitter and Facebook, where the teams at these companies get to decide what they want to implement with very little direct input form the users. The federated model allows users to take control of their data.
+</p>
+
+<p>
+<a href="https://www.gnu.org/philosophy/floss-and-foss.en.html">FLOSS and FOSS explainer -Free Software Foundation</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=Ag1AKIl_2GM">Free software, free society: Richard Stallman at TEDxGeneva 2014</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-" class="outline-2">
+<h2 id="sec-">Future of the Fediverse</h2>
+<div class="outline-text-2" id="text-">
+<p>
+The future of the Fediverse is bright as research firm GlobalData forcasts,&ldquo;GlobalData predicts a rise of &lsquo;fediverse&rsquo; or &lsquo;federated universe&rsquo;. It is an ensemble of federated (i.e. interconnected) servers that are used for web publishing (i.e. social networking, microblogging, blogging, or websites) and file hosting&rdquo;. They also said this regarding a Fediverse Spring as &ldquo;new platforms with a decenteralized but conected multiserver proposition provide new experiences&rdquo; I hope that this research firm is correct as it would hopefully popularize the Fediverse and FLOSS software.
+</p>
+
+<p>
+<a href="https://www.itweb.co.za/content/rW1xLv5nPd47Rk6m">Fediverse&rsquo; predicted to overtake metaverse in 2023</a>
+</p>
+</div>
+</div>
+</div></div></div>
+<footer id="postamble" class="">
+<div><p class="author">Author: Gardner Berry</p>
+<p class="date">Created: 2023-01-22 Sun 18:23</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 28.2 (<a href="http://orgmode.org">Org-mode</a> 9.6)</p>
+</div>
+</footer>
+</body>
+</html>

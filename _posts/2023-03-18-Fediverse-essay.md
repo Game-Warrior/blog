@@ -1,0 +1,23 @@
+# Introduction
+
+THE Fediverse short for federated universe is a collection of social media networks that are connected by a couple of protocols. The largest and most notable of which is Activity Pub. Mastodon is a micro blogging platform and is the largest of the networks that make up the fediverse. It has gained popularity after Elon Musk&rsquo;s purchase of Twitter and new erratic policy decisions.
+
+![img](/Users/gb/Documents/School/Jana/How-the-Fediverse-connects.png "This is a diagram of how the Fediverse interconnects.")
+
+![img](/Users/gb/Documents/School/Jana/Fediverse_branches_1.2.png "This shows the manny branches of the Fediverse")
+
+
+# Why You Should use the Fediverse
+
+You should use the Fediverse because it is made up free/libre software. Because this source code of the software is available to anyone, anyone can use it or modify it and distribute it, and it allows the users/developers to decide what they want to do with the project. This is in stark contrast to social media sites like Twitter and Facebook, where the teams at these companies get to decide what they want to implement with very little direct input form the users. The federated model allows users to take control of their data.
+
+[FLOSS and FOSS explainer -Free Software Foundation](https://www.gnu.org/philosophy/floss-and-foss.en.html)
+
+[Free software, free society: Richard Stallman at TEDxGeneva 2014](https://www.youtube.com/watch?v=Ag1AKIl_2GM)
+
+
+# Future of the Fediverse
+
+The future of the Fediverse is bright as research firm GlobalData forcasts,&ldquo;GlobalData predicts a rise of &lsquo;fediverse&rsquo; or &lsquo;federated universe&rsquo;. It is an ensemble of federated (i.e. interconnected) servers that are used for web publishing (i.e. social networking, microblogging, blogging, or websites) and file hosting&rdquo;. They also said this regarding a Fediverse Spring as &ldquo;new platforms with a decenteralized but conected multiserver proposition provide new experiences&rdquo; I hope that this research firm is correct as it would hopefully popularize the Fediverse and FLOSS software.
+
+[Fediverse&rsquo; predicted to overtake metaverse in 2023](https://www.itweb.co.za/content/rW1xLv5nPd47Rk6m)
