@@ -2,5 +2,11 @@
 #+description: About The Author
 #+author: Gardner Berry
 #+options: num:nil toc:nil
+#+begin_src yaml
+layout: page
+title: "About-Me"
+permalink: /about-me
+#+end_src
+
 
 * About Me
