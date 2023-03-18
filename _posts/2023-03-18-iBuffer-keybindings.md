@@ -1,23 +1,9 @@
-layout: post
-title: "Remapping iBuffer keybindings in Doom Emacs"
-date: 2023-03-18 
-categories: emacs keybindings
-
-- [The Problem](#org450e003)
-- [The Solution](#org0edb4b7)
-
-
-
-<a id="org450e003"></a>
-
 # The Problem
 
 I use DOOM Emacs as my configuration frame work, and it uses IBUFFER to manage the buffers. The keybindings that are used in IBUFFER are the same as the standard Text manipulation keys. So J and K are up and down like normal but L and H just move you from side to side in the buffer. So now this brings me to my problem, I wanted to make it so that when I press L it will enter the buffer. When I tried to google this I found no documentation. so I went to the DOOM Emacs discord and asked for help, and the lead maintainer of DOOM spent around 10 minutes replying. So as discords are black holes for information I am putting this on my blog in an attempt to preserve it.
 
 ![img](/Users/gb/Developer/Projects/blog/images/Screenshot 2023-03-18 at 9.28.43 AM.png)
 
-
-<a id="org0edb4b7"></a>
 
 # The Solution
 
