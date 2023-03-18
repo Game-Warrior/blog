@@ -2,10 +2,9 @@
 
 THE Fediverse short for federated universe is a collection of social media networks that are connected by a couple of protocols. The largest and most notable of which is Activity Pub. Mastodon is a micro blogging platform and is the largest of the networks that make up the fediverse. It has gained popularity after Elon Musk&rsquo;s purchase of Twitter and new erratic policy decisions.
 
-![img](~/Developer/Projects/blog/org/Fediverese-Essay/How-the-Fediverse-connects.png "This is a diagram of how the Fediverse interconnects.")
+![How-the-Fediverse-connects](https://user-images.githubusercontent.com/105872719/226110196-82af3850-a3a7-4838-9c20-3c0a8073fff0.png)
 
-![img](~/Developer/Projects/blog/org/Fediverese-Essay/Fediverse_branches_1.2.png "This shows the manny branches of the Fediverse")
-
+![Fediverse_branches_1 2](https://user-images.githubusercontent.com/105872719/226110199-f9aac56f-9dc7-4ec4-a55d-fb4bb3daea8f.png)
 
 # Why You Should use the Fediverse
 
