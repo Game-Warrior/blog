@@ -1,3 +1,4 @@
+title: iBuffer Keybindings
 # The Problem
 
 I use DOOM Emacs as my configuration frame work, and it uses IBUFFER to manage the buffers. The keybindings that are used in IBUFFER are the same as the standard Text manipulation keys. So J and K are up and down like normal but L and H just move you from side to side in the buffer. So now this brings me to my problem, I wanted to make it so that when I press L it will enter the buffer. When I tried to google this I found no documentation. so I went to the DOOM Emacs discord and asked for help, and the lead maintainer of DOOM spent around 10 minutes replying. So as discords are black holes for information I am putting this on my blog in an attempt to preserve it.
