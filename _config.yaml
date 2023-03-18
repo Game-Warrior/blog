@@ -2,6 +2,3 @@ theme: minima
 title: Game-Warrior's Homepage
 markdown: GFM
 layout: post
-title: "Remapping iBuffer keybindings in Doom Emacs"
-date: 2023-03-18
-categories: emacs keybindings
