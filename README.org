@@ -1,8 +1,0 @@
-#+title: README
-#+description: description
-#+author: Gardner Berry
-#+options: toc:nil num:nil timestamp:nil
-
-
-* README
-This is the repository for my Github Pages blog.
