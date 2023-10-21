@@ -1,6 +1,7 @@
+title: Fediverse essay
 # Introduction
 
-THE Fediverse short for federated universe is a collection of social media networks that are connected by a couple of protocols. The largest and most notable of which is Activity Pub. Mastodon is a micro blogging platform and is the largest of the networks that make up the fediverse. It has gained popularity after Elon Musk&rsquo;s purchase of Twitter and new erratic policy decisions.
+THE Fediverse short for federated universe is a collection of social media networks that are connected by a couple of protocols. The largest and most notable of which is Activity Pub. Mastodon is a micro blogging platform and is the largest of the networks that make up the fediverse. It has gained popularity after Elon Musk's purchase of Twitter and new erratic policy decisions.
 
 ![How-the-Fediverse-connects](https://user-images.githubusercontent.com/105872719/226110196-82af3850-a3a7-4838-9c20-3c0a8073fff0.png)
 
@@ -17,6 +18,6 @@ You should use the Fediverse because it is made up free/libre software. Because 
 
 # Future of the Fediverse
 
-The future of the Fediverse is bright as research firm GlobalData forcasts,&ldquo;GlobalData predicts a rise of &lsquo;fediverse&rsquo; or &lsquo;federated universe&rsquo;. It is an ensemble of federated (i.e. interconnected) servers that are used for web publishing (i.e. social networking, microblogging, blogging, or websites) and file hosting&rdquo;. They also said this regarding a Fediverse Spring as &ldquo;new platforms with a decenteralized but conected multiserver proposition provide new experiences&rdquo; I hope that this research firm is correct as it would hopefully popularize the Fediverse and FLOSS software.
+The future of the Fediverse is bright as research firm GlobalData forcasts, GlobalData predicts a rise of fediverse or federated universe. It is an ensemble of federated (i.e. interconnected) servers that are used for web publishing (i.e. social networking, microblogging, blogging, or websites) and file hosting. They also said this regarding a Fediverse Spring as new platforms with a decenteralized but conected multiserver proposition provide new experiences I hope that this research firm is correct as it would hopefully popularize the Fediverse and FLOSS software.
 
 [Fediverse&rsquo; predicted to overtake metaverse in 2023](https://www.itweb.co.za/content/rW1xLv5nPd47Rk6m)
