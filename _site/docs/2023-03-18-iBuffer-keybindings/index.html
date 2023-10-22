@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>blog | My github pages blog</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="blog" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="My github pages blog" />
+<meta property="og:description" content="My github pages blog" />
+<link rel="canonical" href="http://localhost:4000/docs/2023-03-18-iBuffer-keybindings/" />
+<meta property="og:url" content="http://localhost:4000/docs/2023-03-18-iBuffer-keybindings/" />
+<meta property="og:site_name" content="blog" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="blog" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"My github pages blog","headline":"blog","url":"http://localhost:4000/docs/2023-03-18-iBuffer-keybindings/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=b8edf1d7afaa87c1f1103bc6d5dea66e81b6f896">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#353535">
+<meta name="msapplication-navbutton-color" content="#353535">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <ul>
+            <li class="fork"><a href="https://github.com/Game-Warrior/blog">View On GitHub</a></li>
+            
+          </ul>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>blog</h1>
+          <p>My github pages blog</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/Game-Warrior">Game-Warrior</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></span>
+        </div>
+
+        <p>title: iBuffer Keybindings</p>
+<h1 id="the-problem">The Problem</h1>
+<p>I use DOOM Emacs as my configuration frame work, and it uses IBUFFER to manage the buffers. The keybindings that are used in IBUFFER are the same as the standard Text manipulation keys. So J and K are up and down like normal but L and H just move you from side to side in the buffer. So now this brings me to my problem, I wanted to make it so that when I press L it will enter the buffer. When I tried to google this I found no documentation. so I went to the DOOM Emacs discord and asked for help, and the lead maintainer of DOOM spent around 10 minutes replying. So as discords are black holes for information I am putting this on my blog in an attempt to preserve it.</p>
+<p>![img](/Users/gb/Developer/Projects/blog/images/Screenshot 2023-03-18 at 9.28.43 AM.png)</p>
+<h1 id="the-solution">The Solution</h1>
+<p>Keybindings in Emacs can be a bit complicated, but here's my attempt to lay out the steps to binding a key:</p>
+<ol>
+<li>Identify what (major or minor) mode you want to associate your new keybind with. C-h m can give you information about currently active modes in the current buffer. Or you can look up the value of the major-mode variable: C-h v major-mode. This should tell you ibuffer-mode.</li>
+<li>Identify the keymap variable associated with ibuffer-mode is (conventionally, that's {mode-name}-map, but sometimes it's {mode-name}-keymap). You can search variables with C-h v ^ibuffer-mode. You'll eventually find ibuffer-mode-map.</li>
+<li>Identify the package that this keymap variable is defined in. C-h v ibuffer-mode-map will tell you it's defined in a ibuffer.el file, and the package name is often just the name of the file minus the extension: ibuffer.</li>
+<li>Identify what command you want to execute when you press l. One may already exist; like C-h v, you can use C-h x to search all known commands. Or even better: since you already know the enter key does what you want, type C-h k then press enter key. This gives you documentation about the command bound to enter: ibuffer-visit-buffer.</li>
+<li>Finally, bind the new key on the keymap variable (#2) to the command (#4), after the package (#3) is loaded. Doom provides the map! macro to do all this in one go:</li>
+</ol>
+<div class="language-emacs-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">;; in Doom</span>
+<span class="p">(</span><span class="nv">map!</span> <span class="ss">:after</span> <span class="nv">ibuffer</span>
+      <span class="ss">:map</span> <span class="nv">ibuffer-mode-map</span>
+      <span class="s">"l"</span> <span class="nf">#'</span><span class="nv">ibuffer-visit-buffer</span><span class="p">)</span>
+</code></pre></div></div>
+<p>However, there may be cases where this won't work. Use C-h k to debug that. In this case, it'll tell you that this key is bound to evil-forward-char, not ibuffer-visit-buffer. That's because evil (vim-emulated) keybinds have precedence over non-evil ones. The quick fix: make your keybinding an evil keybind:</p>
+<div class="language-emacs-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">;; in Doom</span>
+ <span class="p">(</span><span class="nv">map!</span> <span class="ss">:after</span> <span class="nv">ibuffer</span>
+       <span class="ss">:map</span> <span class="nv">ibuffer-mode-map</span>
+<span class="nb">-</span>      <span class="s">"l"</span> <span class="nf">#'</span><span class="nv">ibuffer-visit-buffer</span><span class="p">)</span>
+<span class="nb">+</span>      <span class="ss">:n</span> <span class="s">"l"</span> <span class="nf">#'</span><span class="nv">ibuffer-visit-buffer</span><span class="err">)</span>
+</code></pre></div></div>
+<p>The :n binds it to normal mode on ibuffer-mode-map.</p>
+<p>These precedence rules aren't very obvious, and there's a lot of detective work involved for more complex cases, but that should roughly outline the kind of issues you're going to run into most.</p>
+<p>Hope that helps!</p>
+
+
+      </section>
+
+    </div>
+  </body>
+</html>
