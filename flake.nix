@@ -6,7 +6,6 @@
   };
 
   outputs = { self, nixpkgs }: {
-
     packages.aarch64-darwin = {
       defaultPackage = let
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
@@ -14,6 +13,7 @@
           name = "home-packages";
           paths = with pkgs; [
             # general tools
+            neofetch
             git
             jekyll
             ruby
