@@ -1,7 +1,5 @@
 *.log
 *.tar
-Backups/
 *.DS_Store
-emacs-stuff/emacs-reveal/
 *._
 *.localized
