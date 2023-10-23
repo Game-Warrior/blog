@@ -29,6 +29,7 @@
     in pkgs.mkShell {
       buildInputs = with pkgs; [
         # List of packages for development
+        neofetch
         git
         jekyll
         ruby
