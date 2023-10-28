@@ -1,3 +1,4 @@
+title: My viewing recomendations
 # My recommended Youtube Videos/Channels
 This is a list of videos that I have complied over the year or so. After I decided that I should make it so that I can send one or two links instead of a dozen. I am going to list out some of the different creator that I decided to curate in this list.
 
